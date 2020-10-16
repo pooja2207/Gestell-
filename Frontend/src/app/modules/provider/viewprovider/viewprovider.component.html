@@ -1,0 +1,77 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<div class="container bootdey flex-grow-1 container-p-y">
+
+            <div class="media align-items-center py-3 mb-3">
+              <img *ngIf="providerDetail.image != null" [src]="imagePath +'/'+ providerDetail.image" style="width: 100px;height:100px;" class="d-block ui-w-100 rounded-circle">
+                                    <ng-template [ngIf]="providerDetail.image === null">
+                                        <img src="../../../../assets/images/default-img.png">
+                                    </ng-template>
+              
+              <div class="media-body ml-4">
+                <h4 class="font-weight-bold mb-0">{{providerDetail.name}}<span class="text-muted font-weight-normal"></span></h4>
+                <div class="text-muted mb-2">ID: {{providerDetail.id }}</div>
+                <div class="row">
+                  <div class="col-md-1">
+                    <div [socialShare]="'fb'"><a href="#" class="fa fa-facebook"></a></div>
+                  </div>
+                  <div class="col-md-1">
+                    <div [socialShare]="'in'"><a href="#" class="fa fa-linkedin" style="margin-left: -33px;"></a></div>
+                  </div>
+                </div>
+              </div>
+               
+              </div>
+           
+
+            
+
+            <div class="card">
+              <hr class="border-light m-0">
+              <div class="card-body">
+
+                <table class="table user-view-table m-0">
+                  <tbody>
+                    <tr>
+                      <td>Name:</td>
+                      <td>{{providerDetail.name}}</td>
+                    </tr>
+                    <tr>
+                      <td>Description:</td>
+                      <td>{{providerDetail.description}}</td>
+                    </tr>
+                    <tr>
+                      <td>Rating:</td>
+                      <td>{{providerDetail.rating}}</td>
+                    </tr>
+                    <tr>
+                      <td>Speed:</td>
+                      <td>{{providerDetail.max_speed}}</td>
+                    </tr>
+                    <tr>
+                      <td>Contact No:</td>
+                      <td>{{providerDetail.contact_no}}</td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td>{{providerDetail.email}}</td>
+                    </tr>
+                    <tr>
+                      <td>Image:</td>
+                      <div class="profile-pic">
+                        <img *ngIf="providerDetail.image != null" [src]="imagePath +'/'+ providerDetail.image" style="width: 100px;height:100px;">
+                                    <ng-template [ngIf]="providerDetail.image === null">
+                                        <img src="../../../../assets/images/default-img.png">
+                                    </ng-template>
+                      </div>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+
+                
+
+                
+              </div>
+            </div>
+
+          </div>
